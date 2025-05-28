@@ -54,7 +54,7 @@
                 <p>{{quantity}}</p>
                 <img (click)="increaseQuantity()" src="https://www.svgrepo.com/show/522231/plus-circle.svg" alt="Increase">
             </div>
-            <button class="add-to-cart-button">
+            <button class="add-to-cart-button" (click)="addToCart(product)">
                 Add to Cart - R{{(product.price * quantity) | number:'1.2-2'}}
             </button>
         </div>
