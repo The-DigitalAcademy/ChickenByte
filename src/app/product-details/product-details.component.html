@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-    <body>
+<body>
 <div *ngIf="product" class="product-container">
     <div class="header">
         <div class="back-button" [routerLink]="['/']" routerLinkActive="router-link-active">
@@ -20,7 +20,7 @@
         <h4 class="product-price">R{{product.price | number:'1.2-2'}}</h4>
     </div>
 
-    <div class="product-details" style=" background-color: white;">
+    <div class="product-details" style="background-color: white;">
         <div class="section">
             <h2 class="section-title">DESCRIPTION</h2>
             <p class="section-content">{{product.description}}</p>
@@ -32,12 +32,12 @@
         <div class="section">
             <h2 class="section-title">COMMENT</h2>
             <p class="section-content">Add instructions how you would like your food</p>
-            <input type="text" class="comment-input" />
+            <input type="text" class="comment-input" [(ngModel)]="specialInstructions" />
         </div>
     </div>
 
     <div class="footer">
-        <div style=" display: flex; gap: 10px; flex-wrap: wrap;">
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
         <div
             class="size-selector"
             *ngFor="let flavour of product.flavour"
@@ -47,14 +47,8 @@
         </div>
         </div>
 
-        
         <div class="add-to-cart">
-            <div class="quantity-selector">
-                <img (click)="decreaseQuantity()" src="https://www.svgrepo.com/show/524753/minus-circle.svg" alt="Decrease">
-                <p>{{quantity}}</p>
-                <img (click)="increaseQuantity()" src="https://www.svgrepo.com/show/522231/plus-circle.svg" alt="Increase">
-            </div>
-            <button class="add-to-cart-button" (click)="addToCart(product)">
+            <button class="add-to-cart-button" (click)="addToCart()">
                 Add to Cart - R{{(product.price * quantity) | number:'1.2-2'}}
             </button>
         </div>
@@ -64,6 +58,5 @@
 <div *ngIf="errorMessage" class="error-message">
     {{errorMessage}}
 </div>
-
 </body>
 </html>
