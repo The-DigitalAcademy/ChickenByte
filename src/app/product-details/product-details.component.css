@@ -1,0 +1,165 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+}
+        
+        body {
+            background-color: #F8F7F5;
+            padding-bottom: 100px;
+        }
+        
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+            height: 60px;
+            z-index: 50;
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .back-button {
+            margin-right: 15px;
+        }
+        
+        .back-button img {
+            height: 24px;
+            width: 24px;
+        }
+        
+        .title {
+            font-weight: bold;
+            font-size: 18px;
+            color: #333;
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 250px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-top: 60px;
+        }
+        
+        .product-info {
+            background-color: white;
+            padding: 20px 0px;
+            border-radius: 15px 15px 0 0;
+            margin-top: -20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .product-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .product-price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #E5002B;
+            margin-bottom: 15px;
+        }
+        
+        .section {
+            padding: 15px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        
+        .section-content {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+            padding: 15px;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+        
+        .size-selector {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            padding: 10px 15px;
+            margin-bottom: 15px;
+            display: inline-block;
+            font-size: 14px;
+        }
+
+        
+        .size-selector.selected {
+            background-color: #E5002B;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            padding: 10px 15px;
+            margin-bottom: 15px;
+            display: inline-block;
+            font-size: 14px;
+            color: white;
+        }
+        
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            margin-right: 15px;
+        }
+        
+        .quantity-selector img {
+            height: 24px;
+            width: 24px;
+        }
+        
+        .quantity-selector p {
+            margin: 0 15px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        .add-to-cart {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .add-to-cart-button {
+            background-color: #E5002B;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .comment-input{
+            margin-top: 10px; 
+            width: 130px; 
+            height: 40px;
+            border-radius: 40px; 
+            border-color: whitesmoke;
+        }

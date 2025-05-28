@@ -1,0 +1,42 @@
+<div class="carousel-section" style="width: 92vw; margin: 0 auto; 
+justify-content: center; margin-top: 40px;
+height: 200px; border-radius: 20px;
+background: url('assets/images/poster.png');
+background-position: center; background-repeat: no-repeat; background-size: cover;
+">
+
+</div>
+
+<div class="category-section">
+    <div *ngFor="let category of categories" class="a-category" [class.active]="isActiveCategory(category)"
+        (click)="filterByCategory(category)">
+        <p>{{category}}</p>
+    </div>
+</div>
+
+<div class="main-scroll" style="overflow-y: scroll; height: 55vh; width: 94vw; ">
+    <div class="product-section" style="width: 82vw; margin: 0 auto; gap: 30px;height: 70vh; flex-wrap: wrap; display: flex; ">
+
+        @for (item of filteredItems; track item.id) {
+        @if (activeCategory === 'All' || item.category === activeCategory) {
+        <div class="a-product"  style="height: 190px; width: 37vw; text-align: center; border: none; " [attr.data-id]="item.id">
+            <div [routerLink]="'/products/' + item.id" class="image" [style.background-image]="'url(' + item.imageUrl + ')'"
+                style="height: 100px; width: 100%; background-position: center; background-size: cover; background-repeat: no-repeat;">
+            </div>
+            <p>{{item.title}}</p>
+           
+            <button class="addtocartButton" (click)="addToCart(item)" [attr.data-category]="item.category" style="width: 90%; height: 40px; background-color: #E5002B; 
+                          outline: none; border: none; font-weight: bold; color: white; font-size: 11px; margin-top: 5px;">
+                ADD TO CART
+            </button>
+        </div>
+       
+        }
+        }
+
+
+    </div>
+</div>
+
+
+<app-navbar></app-navbar>

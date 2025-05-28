@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+    <body>
+<div *ngIf="product" class="product-container">
+    <div class="header">
+        <div class="back-button" [routerLink]="['/']" routerLinkActive="router-link-active">
+            <img src="https://www.svgrepo.com/show/324205/back-arrow-navigation.svg" alt="Back">
+        </div>
+        <div class="title">{{product.title}}</div>
+    </div>
+
+    <div class="product-image" [style.background-image]="'url(' + product.imageUrl + ')'"></div>
+
+    <div class="product-info">
+        <h1 class="product-name">{{product.title}}</h1>
+        <h4 class="product-price">R{{product.price | number:'1.2-2'}}</h4>
+    </div>
+
+    <div class="product-details" style=" background-color: white;">
+        <div class="section">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <p class="section-content">{{product.description}}</p>
+        </div>
+        <div class="section">
+            <h2 class="section-title">CATEGORY</h2>
+            <p class="section-content">{{product.category}}</p>
+        </div>
+        <div class="section">
+            <h2 class="section-title">COMMENT</h2>
+            <p class="section-content">Add instructions how you would like your food</p>
+            <input type="text" class="comment-input" />
+        </div>
+    </div>
+
+    <div class="footer">
+        <div style=" display: flex; gap: 10px; flex-wrap: wrap;">
+        <div
+            class="size-selector"
+            *ngFor="let flavour of product.flavour"
+            [ngClass]="{ 'selected': flavour === selectedFlavour }"
+            (click)="selectFlavour(flavour)">
+            {{ flavour }}
+        </div>
+        </div>
+
+        
+        <div class="add-to-cart">
+            <div class="quantity-selector">
+                <img (click)="decreaseQuantity()" src="https://www.svgrepo.com/show/524753/minus-circle.svg" alt="Decrease">
+                <p>{{quantity}}</p>
+                <img (click)="increaseQuantity()" src="https://www.svgrepo.com/show/522231/plus-circle.svg" alt="Increase">
+            </div>
+            <button class="add-to-cart-button">
+                Add to Cart - R{{(product.price * quantity) | number:'1.2-2'}}
+            </button>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="errorMessage" class="error-message">
+    {{errorMessage}}
+</div>
+
+</body>
+</html>

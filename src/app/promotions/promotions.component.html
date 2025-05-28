@@ -1,0 +1,50 @@
+<div class="ad-section" style="width: 92vw; margin: 0 auto; 
+justify-content: center; margin-top: 30px;
+height: 200px; border-radius: 20px;
+background: url('assets/images/bey1.gif');
+background-position: center; background-repeat: no-repeat; background-size: cover;
+">
+
+</div>
+
+<div class="headings" style="display: flex;">
+<h1 class="heading">Promotions   </h1> 
+</div>
+ 
+
+<div class="heading-section" style="border-bottom: 2px solid #E5002B; margin-top: -20px; padding-bottom: -11px;">
+</div>
+
+<div class="main-scroll" 
+style="overflow-y: scroll; height: 55vh; 
+ width: 94vw; margin-top: 20px; ">
+    <div class="product-section" style="width: 82vw; margin: 0 auto; gap: 30px;
+height: 58vh; flex-wrap: wrap; display: flex; " >
+
+     @for (item of menuItems; track item.id) {
+            @if (item.promotion === true) {
+                <div class="a-product" 
+                
+                     style="height: 240px; width: 37vw;
+                      text-align: center;" 
+                     [attr.data-id]="item.id">
+                    <div [routerLink]="'/products/' + item.id" class="image" [style.background-image]="'url(' + item.imageUrl + ')'" 
+                         style="height: 100px; width: 100%; background-position: center; background-size: cover; background-repeat: no-repeat;">
+                    </div>
+                    <p class="food-title">{{item.title}}</p>
+                    <p class="food-price">R{{item.price.toFixed(2)}}</p>
+                    <button class="addtocartButton" (click)="addToCart(item)" [attr.data-category]="item.category"
+                            style="width: 90%; height: 40px; background-color: #000; 
+                            outline: none; border: none; font-weight: bold; color: white; 
+                            font-size: 11px;">
+                        ADD TO CART
+                    </button>
+                </div>
+            }
+        }
+    
+    
+</div>
+</div>
+
+<app-navbar></app-navbar>

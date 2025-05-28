@@ -1,0 +1,715 @@
+{
+  "menu": [
+    {
+      "id": "1",
+      "imageUrl": "https://images.ctfassets.net/0p42pznmbeec/3BzuZ5x6SVHazSntPA4JyS/b4869ac2dc7b4c48fc3dcb33ab53de61/Colonel_Burger_1200x900.jpg?h=900&w=1200&fm=webp&fit=fill",
+      "title": "Classic Chicken Burger",
+      "price": 75.99,
+      "category": "Burgers",
+      "promotion": false,
+      "description": "100% Chicken patty with lettuce, tomato, onion, pickles, and signature sauce in a toasted bun",
+      "flavour": [
+        "Mild",
+        "Hot",
+        "Extra Hot"
+      ]
+    },
+    {
+      "id": "2",
+      "imageUrl": "https://images.ctfassets.net/0p42pznmbeec/4J7RauzcyD6KkQu9Qhpp28/80d37a2f8e8a47d651b1e82a97896b09/Chips_Sml_1200x900.jpg?h=900&w=1200&fm=webp&fit=fill",
+      "title": "French Fries",
+      "price": 89.99,
+      "category": "Snacks",
+      "promotion": false,
+      "description": "Nice crispy soft-on-the-inside slap chips with our special spice added with your favorite sauce.",
+      "flavour": [
+        "Chip Sauce",
+        "Cheese",
+        "Peri-Peri",
+        "Barbecue"
+      ]
+    },
+    {
+      "id": "3",
+      "imageUrl": "https://images.ctfassets.net/0p42pznmbeec/1c2o5TmN51SVoQ3e3ZwP53/5ab291e5690926711e986d01af76808b/67988_kfc_-_double_stack_burger_solo_1200x900.jpg?h=900&w=1200&fm=webp&fit=fill",
+      "title": "Spicy Chicken Burger",
+      "price": 69.99,
+      "category": "Burgers",
+      "promotion": false,
+      "description": "Crispy fried chicken fillet with peri-peri mayo, lettuce, and jalapeños",
+      "flavour": [
+        "Mild",
+        "Hot",
+        "Extra Hot"
+      ]
+    },
+    {
+      "id": "4",
+      "imageUrl": "https://images.ctfassets.net/0p42pznmbeec/3ZhASMoBmPcwJdHqPR0i7g/8b867be249aaea0c3d2e0c21283d427c/Crunch_Wrapsta_1200x900.jpg",
+      "title": "Chicken Caesar Wrap",
+      "price": 65.5,
+      "category": "Wraps",
+      "promotion": false,
+      "description": "Grilled chicken, romaine lettuce, parmesan, and Caesar dressing in a soft tortilla",
+      "flavour": [
+        "Mild",
+        "Hot",
+        "Extra Hot"
+      ]
+    },
+    {
+      "id": "5",
+      "imageUrl": "https://t3.ftcdn.net/jpg/11/09/97/66/360_F_1109976654_pK1MkhE4GX113rCWXThS0MJ1F9x8DKwU.jpg",
+      "title": "Falafel & Hummus Wrap",
+      "price": 59.99,
+      "category": "Wraps",
+      "promotion": false,
+      "description": "Crispy falafel, hummus, fresh veggies, and tahini sauce in a whole wheat wrap",
+      "flavour": [
+        "Mild",
+        "Hot",
+        "Extra Hot"
+      ]
+    },
+    {
+      "id": "6",
+      "imageUrl": "https://images.ctfassets.net/0p42pznmbeec/4pXIDNjxFdZ8lAegrJ3rEH/751f08e04b7ddbee5283b1f74f303e3d/Coke_Sugar_Buddy_440ml_1200x900.jpg?h=900&w=1200&fm=webp&fit=fill",
+      "title": "Coca-Cola (440ml)",
+      "price": 25,
+      "category": "Drinks",
+      "promotion": false,
+      "description": "Classic Coca-Cola soft drink",
+      "flavour": [
+        "Regular 440ml"
+      ]
+    },
+    {
+      "id": "7",
+      "imageUrl": "https://img.freepik.com/premium-photo/glass-strawberry-milkshake-isolated-white-background_185193-46813.jpg",
+      "title": "Strawberry Milkshake",
+      "price": 45,
+      "category": "Something Sweet",
+      "promotion": false,
+      "description": "Creamy milkshake made with fresh strawberries and vanilla ice cream",
+      "flavour": [
+        "Small",
+        "Regular",
+        "Large"
+      ]
+    },
+    {
+      "id": "8",
+      "imageUrl": "https://media.istockphoto.com/id/497897580/photo/iced-coffee-in-takeaway-cup.jpg?s=612x612&w=0&k=20&c=IR0HtWlIcCa_ryIp4l3TMUetuNqWlNxiJxaXPPXJbQc=",
+      "title": "Iced Coffee",
+      "price": 39.99,
+      "category": "Drinks",
+      "promotion": false,
+      "description": "Chilled coffee with milk and a hint of caramel",
+      "flavour": [
+        "Small",
+        "Regular",
+        "Large"
+      ]
+    },
+    {
+      "id": "9",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9rX2W27QbZmHMFAnYzMvbGymVh5dZz-Q5FQ&s",
+      "title": "Loaded Nachos",
+      "price": 75,
+      "category": "Snacks",
+      "promotion": false,
+      "description": "Crispy tortilla chips topped with melted cheese, jalapeños, guacamole, and sour cream",
+      "flavour": [
+        "Mild",
+        "Hot",
+        "Extra Hot"
+      ]
+    },
+    {
+      "id": "10",
+      "imageUrl": "https://images.ctfassets.net/0p42pznmbeec/4aaCkwm2XfVeIypXlqTUuz/e2a6a9e94aa33f9bf247dfcae70c1e23/Dunked_Wings_10pc_1200x900.jpg?h=900&w=1200&fm=webp&fit=fill",
+      "title": "8 Buffalo Chicken Wings",
+      "price": 65.99,
+      "category": "Snacks",
+      "promotion": false,
+      "description": "Crispy fried wings with choice of BBQ, Buffalo, or Sweet Chili sauce",
+      "flavour": [
+        "Mild",
+        "Hot",
+        "Extra Hot"
+      ]
+    },
+    {
+      "id": "11",
+      "imageUrl": "https://img.freepik.com/premium-photo/burger-bread-isolated-white-background_188078-13637.jpg",
+      "title": "School Buns Bread",
+      "price": 45.5,
+      "category": "Snacks",
+      "promotion": false,
+      "description": "Toasted bread topped with garlic butter and melted mozzarella",
+      "flavour": [
+        "Regular"
+      ]
+    },
+    {
+      "id": "12",
+      "imageUrl": "https://static.vecteezy.com/system/resources/thumbnails/030/719/184/small_2x/chocolate-brownie-cake-with-ice-cream-and-chocolate-syrup-isolated-on-white-background-photo.jpg",
+      "title": "Chocolate Brownie Sundae",
+      "price": 55,
+      "category": "Something Sweet",
+      "promotion": false,
+      "description": "Warm chocolate brownie topped with vanilla ice cream and chocolate syrup",
+      "flavour": [
+        "Regular",
+        "Large"
+      ]
+    },
+    {
+      "id": "13",
+      "imageUrl": "https://burgerdrive2020.de/include/img/smenu/6e6367304f65c97b82a4b97d0f33edac.png",
+      "title": "Oreo Milkshake",
+      "price": 49.99,
+      "category": "Something Sweet",
+      "promotion": false,
+      "description": "Blended vanilla ice cream with crushed Oreo cookies",
+      "flavour": [
+        "Small",
+        "Medium",
+        "Large"
+      ]
+    },
+    {
+      "id": "14",
+      "imageUrl": "https://img.freepik.com/premium-photo/bbq-grilled-ribeye-steak-rib-eye-beef-meat-grill-with-herbs-isolated-white-background_89816-45129.jpg",
+      "title": "Grilled Ribeye Steak",
+      "price": 199.99,
+      "category": "Meat",
+      "promotion": false,
+      "description": "Tender ribeye steak served with grilled veggies and fries 300g",
+      "flavour": [
+        "BBQ Sause",
+        "Chutney Sause",
+        "Peri Sause"
+      ]
+    },
+    {
+      "id": "15",
+      "imageUrl": "https://img.freepik.com/premium-photo/bbq-grilled-ribeye-steak-rib-eye-beef-meat-grill-with-herbs-isolated-white-background_89816-45129.jpg",
+      "title": "BBQ Pork Ribs",
+      "price": 189.99,
+      "category": "Meat",
+      "promotion": false,
+      "description": "Slow-cooked pork ribs glazed in smoky BBQ sauce 300g",
+      "flavour": [
+        "BBQ Sause",
+        "Chutney Sause",
+        "Peri Sause"
+      ]
+    },
+    {
+      "id": "16",
+      "imageUrl": "https://media02.stockfood.com/largepreviews/MzQ3NjQ3NjA5/11214439-Two-Lamb-Chops-on-a-White-Background.jpg",
+      "title": "Lamb Chops ",
+      "price": 175.5,
+      "category": "Meat",
+      "promotion": false,
+      "description": "Grilled lamb chops with rosemary and mint sauce",
+      "flavour": [
+        "BBQ Sause",
+        "Chutney Sause",
+        "Peri Sause"
+      ]
+    },
+    {
+      "id": "17",
+      "imageUrl": "https://www.shutterstock.com/image-photo/pile-tasty-cheese-sticks-isolated-600nw-1405975580.jpg",
+      "title": "Mozzarella Sticks (6pc)",
+      "price": 45,
+      "category": "Snacks",
+      "promotion": false,
+      "description": "Breaded mozzarella sticks with marinara dipping sauce",
+      "flavour": [
+        "Regular"
+      ]
+    },
+    {
+      "id": "18",
+      "imageUrl": "https://png.pngtree.com/png-clipart/20241229/original/pngtree-beautiful-onion-rings-on-transparent-background-png-image_18245167.png",
+      "title": "Onion Rings",
+      "price": 35.99,
+      "category": "Snacks",
+      "promotion": false,
+      "description": "Crispy battered onion rings served with ranch dressing",
+      "flavour": [
+        "Regular"
+      ]
+    },
+    {
+      "id": "19",
+      "imageUrl": "https://www.shutterstock.com/image-photo/lava-cake-chocolate-coming-out-600nw-2500970875.jpg",
+      "title": "Chocolate Lava Cake",
+      "price": 59.99,
+      "category": "Something Sweet",
+      "promotion": false,
+      "description": "Warm chocolate cake with a molten center, served with ice cream",
+      "flavour": [
+        "Regular"
+      ]
+    },
+    {
+      "id": "20",
+      "imageUrl": "https://media.istockphoto.com/id/500547364/photo/vanilla-ice-cream.jpg?s=612x612&w=0&k=20&c=9hZnQxUYzOKG2JmAmazzWthwcgiW3l6V_MBu2XoualE=",
+      "title": "Vanilla Ice Cream",
+      "price": 10,
+      "category": "Something Sweet",
+      "promotion": false,
+      "description": "Fresh seasonal fruits with caramel drizzle",
+      "flavour": [
+        "Regular"
+      ]
+    },
+    {
+      "id": "21",
+      "imageUrl": "https://images.ctfassets.net/a2mgcrjjefyo/2izD0hmvm82nJynChwGKaD/9fd08b40807da4c556580c38fc8e1bad/Original_Recipe_Chicken_2pcs_1600x1600.png",
+      "title": "2-Piece Chicken Meal",
+      "price": 65.99,
+      "category": "Meat",
+      "promotion": false,
+      "description": "2 crispy fried chicken pieces with fries and a soft drink",
+      "flavour": [
+        "Mild",
+        "Spicy",
+        "Extra Hot"
+      ]
+    },
+    {
+      "id": "22",
+      "imageUrl": "https://images.ctfassets.net/a2mgcrjjefyo/2izD0hmvm82nJynChwGKaD/9fd08b40807da4c556580c38fc8e1bad/Original_Recipe_Chicken_2pcs_1600x1600.png",
+      "title": "4-Piece Chicken Meal",
+      "price": 109.99,
+      "category": "Meat",
+      "promotion": false,
+      "description": "4 juicy fried chicken pieces with large fries, coleslaw, and a drink",
+      "flavour": [
+        "Mild",
+        "Spicy",
+        "Extra Hot"
+      ]
+    },
+    {
+      "id": "23",
+      "imageUrl": "https://thumbs.dreamstime.com/b/fried-chicken-legs-isolated-white-background-deep-crispy-fast-food-clipping-path-146069919.jpg",
+      "title": "6-Piece Chicken Bucket",
+      "price": 149.99,
+      "category": "Meat",
+      "promotion": false,
+      "description": "6-piece chicken bucket with 2 large sides (fries, coleslaw, or corn)",
+      "flavour": [
+        "Mild",
+        "Spicy",
+        "Extra Hot"
+      ]
+    },
+    {
+      "id": "24",
+      "imageUrl": "https://thumbs.dreamstime.com/b/fried-chicken-nuggets-isolated-white-background-crispy-fried-chicken-nuggets-isolated-white-background-ideal-food-363420123.jpg",
+      "title": "10-Piece Chicken Bucket",
+      "price": 229.99,
+      "category": "Meat",
+      "promotion": false,
+      "description": "Family-sized 10-piece chicken bucket with 3 large sides and 4 rolls",
+      "flavour": [
+        "Mild",
+        "Spicy",
+        "Extra Hot"
+      ]
+    },
+    {
+      "id": "25",
+      "imageUrl": "https://images.ctfassets.net/0p42pznmbeec/5Ooc6ykHqWc94fhQwOAVng/8e02a4953ff8593127833b24d4ef7e52/Double_Crunch_1200x900.jpg?h=900&w=1200&fm=webp&fit=fill",
+      "title": "Double Patty Chicken Burger",
+      "price": 89.99,
+      "category": "Burgers",
+      "promotion": false,
+      "description": "Two crispy chicken patties with cheese, lettuce, and spicy mayo",
+      "flavour": [
+        "Mild",
+        "Spicy",
+        "Extra Hot"
+      ]
+    },
+    {
+      "id": "26",
+      "imageUrl": "https://images.ctfassets.net/0p42pznmbeec/6e1iihtoFQrqlRzl3YQZWx/013ad0b17fae46dce147a86034376b2d/Crunch_Burger_1200x900.jpg?h=900&w=1200&fm=webp&fit=fill",
+      "title": "Crunchy Chicken Burger",
+      "price": 75.5,
+      "category": "Burgers",
+      "promotion": false,
+      "description": "Extra-crispy chicken fillet with pickles and signature sauce",
+      "flavour": [
+        "Mild",
+        "Spicy",
+        "Extra Hot"
+      ]
+    },
+    {
+      "id": "27",
+      "imageUrl": "https://musclepower.pro/51688-large_default/coca-cola-330ml-cola.jpg",
+      "title": "Coca-Cola (330ml)",
+      "price": 20,
+      "category": "Drinks",
+      "promotion": false,
+      "description": "Ice-cold Coca-Cola",
+      "flavour": [
+        "Regular"
+      ]
+    },
+    {
+      "id": "28",
+      "imageUrl": "https://netrinoimages.s3.eu-west-2.amazonaws.com/2019/12/17/667116/522265/fanta_grape_drink_can_sleek_330ml_07_3d_model_c4d_max_obj_fbx_ma_lwo_3ds_3dm_stl_5375324_m.jpg",
+      "title": "Fanta Grape (330ml)",
+      "price": 20,
+      "category": "Drinks",
+      "promotion": false,
+      "description": "Refreshing grape-flavored Fanta",
+      "flavour": [
+        "Regular"
+      ]
+    },
+    {
+      "id": "29",
+      "imageUrl": "https://img.freepik.com/premium-photo/delicious-vegan-burger-with-radish-arugula-wooden-board-white-background_1188894-12943.jpg",
+      "title": "Hake Burger Snack",
+      "price": 55.99,
+      "category": "Snacks",
+      "promotion": false,
+      "description": "Single chicken burger with small fries",
+      "flavour": [
+        "Mild",
+        "Spicy",
+        "Extra Hot"
+      ]
+    },
+    {
+      "id": "30",
+      "imageUrl": "https://www.shutterstock.com/image-photo/crispy-popcorn-chicken-spilling-red-600nw-2510273737.jpg",
+      "title": "Chicken Pops",
+      "price": 45.99,
+      "category": "Snacks",
+      "promotion": false,
+      "description": "Bite-sized crispy chicken pops with dipping sauce",
+      "flavour": [
+        "Mild",
+        "Spicy",
+        "Extra Hot"
+      ]
+    },
+    {
+      "id": "31",
+      "imageUrl": "https://www.shutterstock.com/image-photo/chicken-wings-breading-isolated-on-600nw-1054094549.jpg",
+      "title": "Boneless Chicken Bites",
+      "price": 59.99,
+      "category": "Snacks",
+      "promotion": false,
+      "description": "Tender boneless chicken pieces with BBQ or peri-peri dip",
+      "flavour": [
+        "Mild",
+        "Spicy",
+        "Extra Hot"
+      ]
+    },
+    {
+      "id": "32",
+      "imageUrl": "https://www.shutterstock.com/image-photo/breaded-chicken-drumstick-leg-wing-600nw-2226326983.jpg",
+      "title": "4-Piece Chicken Wings",
+      "price": 49.99,
+      "category": "Meat",
+      "promotion": false,
+      "description": "Spicy or BBQ glazed wings with celery sticks",
+      "flavour": [
+        "Mild",
+        "Spicy",
+        "Extra Hot"
+      ]
+    },
+    {
+      "id": "33",
+      "imageUrl": "https://www.shutterstock.com/image-photo/breaded-chicken-drumstick-leg-wing-600nw-2226326983.jpg",
+      "title": "10-Piece Chicken Wings",
+      "price": 99.99,
+      "category": "Meat",
+      "promotion": false,
+      "description": "10 juicy wings with choice of sauce (Buffalo, BBQ, or Lemon Pepper)",
+      "flavour": [
+        "Mild",
+        "Spicy",
+        "Extra Hot"
+      ]
+    },
+    {
+      "id": "34",
+      "imageUrl": "https://media.istockphoto.com/id/520410807/photo/cheeseburger.jpg?s=612x612&w=0&k=20&c=fG_OrCzR5HkJGI8RXBk76NwxxTasMb1qpTVlEM0oyg4=",
+      "title": "Classic Beef Burger",
+      "price": 75.99,
+      "category": "Burgers",
+      "promotion": false,
+      "description": "100% beef patty with lettuce, tomato, onion, pickles, and signature sauce in a toasted bun",
+      "flavour": [
+        "Mild",
+        "Spicy",
+        "Extra Hot"
+      ]
+    },
+    {
+      "id": "35",
+      "imageUrl": "https://img.freepik.com/premium-photo/delicious-bacon-cheeseburger-white-background_711700-21766.jpg",
+      "title": "Bacon & Cheese Burger",
+      "price": 89.99,
+      "category": "Burgers",
+      "promotion": false,
+      "description": "Juicy beef patty topped with crispy bacon, melted cheddar, BBQ sauce, and caramelized onions",
+      "flavour": [
+        "Regular",
+        "Mild",
+        "Spicy",
+        "Extra Hot"
+      ]
+    },
+    {
+      "id": "36",
+      "imageUrl": "https://t3.ftcdn.net/jpg/11/08/92/50/360_F_1108925093_gZnH1LPoSTou2PSzEEvtyDHbI4BEeo8p.jpg",
+      "title": "Chocolate Milkshake",
+      "price": 45,
+      "category": "Something Sweet",
+      "promotion": false,
+      "description": "Creamy Chocolate milkshake made with fresh oreo and Chocolatte flavour ",
+      "flavour": [
+        "Small",
+        "Medium",
+        "Large"
+      ]
+    },
+    {
+      "id": "37",
+      "imageUrl": "https://media.istockphoto.com/id/162534534/photo/mexican-fajitas.jpg?s=612x612&w=0&k=20&c=GWmhcAGqZHNu6oO-2occkiClVXIGIBbE-LYI9xGbUuU=",
+      "title": "Spicy Vegetable Wrap",
+      "price": 69.99,
+      "category": "Wraps",
+      "promotion": false,
+      "description": "Grilled spicy strips with lettuce, tomato, and chipotle sauce in a tortilla",
+      "flavour": [
+        "Regular",
+        "Mild",
+        "Spicy",
+        "Extra Hot"
+      ]
+    },
+    {
+      "id": "38",
+      "imageUrl": "https://static.vecteezy.com/system/resources/previews/053/270/752/non_2x/vegetarian-tortilla-wrap-with-falafel-and-fresh-salad-vegan-tacos-isolated-on-white-background-top-view-photo.jpg",
+      "title": "Veggie Falafel Wrap",
+      "price": 59.99,
+      "category": "Wraps",
+      "promotion": false,
+      "description": "Crispy falafel, hummus, shredded veggies, and tahini in a whole wheat wrap",
+      "flavour": [
+        "Regular",
+        "Mild",
+        "Spicy",
+        "Extra Hot"
+      ]
+    },
+    {
+      "id": "39",
+      "imageUrl": "https://res.cloudinary.com/dyc0ieeyu/image/upload/c_fit,f_auto,h_700,w_700/v1/products/stoney-tangawizi-zero-1litre.jpg",
+      "title": "Stone Cold Craft Soda",
+      "price": 29.99,
+      "category": "Drinks",
+      "promotion": false,
+      "description": "Premium craft soda in original or berry flavor",
+      "flavour": [
+        "Small",
+        "Medium",
+        "Large"
+      ]
+    },
+    {
+      "id": "40",
+      "imageUrl": "https://www.patrickscellars.com/cdn/shop/files/1562_f5015d6f-486d-4d25-aea6-dd5f367d05d1.jpg?v=1718088807",
+      "title": "Sprite Cold Soda",
+      "price": 22,
+      "category": "Drinks",
+      "promotion": false,
+      "description": "Refreshing lemon-lime soda",
+      "flavour": [
+        "Small",
+        "Medium",
+        "Large"
+      ]
+    },
+    {
+      "id": "41",
+      "imageUrl": "https://t3.ftcdn.net/jpg/00/42/08/04/360_F_42080402_YkOKUubauW3zliAjFDQMmnFWouS7PbJo.jpg",
+      "title": "Fresh Fruit Juice (440ml)",
+      "price": 35,
+      "category": "Drinks",
+      "promotion": false,
+      "description": "100% pure squeezed orange juice, no added sugar",
+      "flavour": [
+        "Orange",
+        "Apple",
+        "Pineapple",
+        "Grape"
+      ]
+    },
+    {
+      "id": "42",
+      "imageUrl": "https://media.istockphoto.com/id/1032678242/photo/water-in-plastic-bottle-on-isolated-white-background.jpg?s=170667a&w=0&k=20&c=vdpYo68_a_IpNFce6Dbx8B4IpfXUs3kGxd-kH5tvbJ4=",
+      "title": "Sparkling Water (500ml)",
+      "price": 25,
+      "category": "Drinks",
+      "promotion": false,
+      "description": "Natural mineral water with light carbonation",
+      "flavour": [
+        "Regular 500ml"
+      ]
+    },
+    {
+      "id": "43",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDusMx8CTrUw5vpKdRjir9KAUauUce8_BtIw&s",
+      "title": "Vanilla Milkshake",
+      "price": 45.99,
+      "category": "Something Sweet",
+      "promotion": false,
+      "description": "Creamy vanilla milkshake topped with whipped cream and sprinkles",
+      "flavour": [
+        "Regular 500ml"
+      ]
+    },
+    {
+      "id": "44",
+      "imageUrl": "https://mzansiforsho.com/wp-content/uploads/2024/08/Streetwise_2_with_pap_1200x900-SWwIL2PvT-transformed-2.webp",
+      "title": "Pap n Vleis Special",
+      "price": 199.99,
+      "category": "Meat",
+      "promotion": true,
+      "description": "Maize Mealie meal with 2 pieces of chicken meat.",
+      "flavour": [
+        "Regular",
+        "Mild",
+        "Spicy",
+        "Extra Hot"
+      ]
+    },
+    {
+      "id": "45",
+      "imageUrl": "https://www.trinigo.com/trinidad-tobago/wp-content/uploads/2014/11/chicken-and-chips.jpg",
+      "title": "Chicken and Chip Special",
+      "price": 45.99,
+      "category": "Meat",
+      "promotion": true,
+      "description": "Two Delicious Chicken Pieces and french fries mixed with our special spices.",
+      "flavour": [
+        "Regular",
+        "Mild",
+        "Spicy",
+        "Extra Hot"
+      ]
+    },
+    {
+      "id": "46",
+      "imageUrl": "https://images.ctfassets.net/a2mgcrjjefyo/3wkTOZuzzAlf3r4k2lVDkr/ef6021b5e74055ff850f2c900e736ea1/Chicken_wings_10_8789_1600x1600_v2.png",
+      "title": "24 hot chicken wings",
+      "price": 45.99,
+      "category": "Meat",
+      "promotion": true,
+      "description": "Not one not two but 24 juicy chicken wings that can satisfy you.",
+      "flavour": [
+        "Regular",
+        "Mild",
+        "Spicy",
+        "Extra Hot"
+      ]
+    },
+    {
+      "id": "47",
+      "imageUrl": "https://thumbs.dreamstime.com/b/donut-burger-chicken-patty-lettuce-white-background-378358775.jpg",
+      "title": "Donut Chicken Burger",
+      "price": 45.99,
+      "category": "Burgers",
+      "promotion": true,
+      "description": "Juicy Chicken Burger patty with a sweet glazed donut.",
+      "flavour": [
+        "Regular",
+        "Mild",
+        "Spicy",
+        "Extra Hot"
+      ]
+    },
+    {
+      "id": "48",
+      "imageUrl": "https://www.shutterstock.com/image-photo/cheeseburger-fries-cola-on-white-600nw-1348977596.jpg",
+      "title": "Chicken Burger Meal Special",
+      "price": 45.99,
+      "category": "Burgers",
+      "promotion": true,
+      "description": "Chicken Burger with a 440ml coke and small chips",
+      "flavour": [
+        "Regular",
+        "Mild",
+        "Spicy",
+        "Extra Hot"
+      ]
+    },
+    {
+      "id": "49",
+      "imageUrl": "https://images.ctfassets.net/0p42pznmbeec/NlPWuNytaUJ6fmS8GBClX/66c467449972d050257dfed01157e9d0/Snack_Burger_1200x900.jpg?h=900&w=1200&fm=webp&fit=fill",
+      "title": "Snack Burger Special",
+      "price": 9.99,
+      "category": "Burgers",
+      "promotion": true,
+      "description": "Snack Burger with chicken patty with our special sauce.",
+      "flavour": [
+        "Regular",
+        "Mild",
+        "Spicy",
+        "Extra Hot"
+      ]
+    },
+    {
+      "id": "50",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdoYa_hY-YoOpZonM_9B5MuxrGUUwBcr3V4Q&s",
+      "title": "Tuesday Two Burger Special",
+      "price": 49.99,
+      "category": "Burgers",
+      "promotion": true,
+      "description": "Get 2 chicken burgers for the price of one on Tuesdays.",
+      "flavour": [
+        "Chicken",
+        "Rib",
+        "Beef"
+      ]
+    }
+  ],
+  "cartItems": [],
+  "users": [
+    {
+      "id": "1",
+      "name": "Memello",
+      "email": "tinte@gmail.com",
+      "password": "123qwe"
+    },
+    {
+      "id": "2",
+      "name": "Mpho",
+      "email": "mpho@gmail.com",
+      "password": "123Mpho"
+    },
+    {
+      "id": "f39e",
+      "name": "",
+      "email": "titen@gmail.com",
+      "password": "12345qwert"
+    }
+  ]
+}

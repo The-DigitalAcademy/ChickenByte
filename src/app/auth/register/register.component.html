@@ -1,0 +1,40 @@
+
+<div class="max-w-[400px] mx-auto p-8 font-['Arial'] text-[#333]">
+    <div (click)="onClose()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+        <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+      </svg></div>
+    <h1 class=" text-black text-center mb-6 text-2xl">Create An Account</h1>
+
+    <form class="flex flex-col gap-5" (ngSubmit)="register()">
+        <div class="flex flex-col gap-2">
+            <input type="text" [(ngModel)]="name" id="name" name="name" placeholder="Enter your name" required
+                class="p-3 border border-gray-300 rounded focus:outline-none focus:border-red-500">
+        </div>
+
+        <div class="flex flex-col gap-2">
+            <input type="email" [(ngModel)]="user.email" id="email" name="email" placeholder="Enter your email" required
+                class="p-3 border border-gray-300 rounded focus:outline-none focus:border-red-500">
+        </div>
+
+        <div class="flex flex-col gap-2">
+            <input type="password" [(ngModel)]="user.password" name="password" id="password"
+                placeholder="Enter your password" required
+                class="p-3 border border-gray-300 rounded focus:outline-none focus:border-red-500">
+        </div>
+
+        <div class="flex flex-col gap-2">
+            <input type="password" [(ngModel)]="confirmPassword" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required
+                class="p-3 border border-gray-300 rounded focus:outline-none focus:border-red-500">
+        </div>
+
+        <button type="submit"
+            class="bg-red-600 text-white p-3 rounded font-semibold hover:bg-red-700 transition-colors">
+            Sign Up
+        </button>
+    </form>
+
+    <p class="text-center mt-6">
+        Already have an account?
+        <a href="/login" class="text-red-600 font-semibold hover:underline">Log in</a>
+    </p>
+</div>

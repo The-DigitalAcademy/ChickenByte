@@ -1,0 +1,73 @@
+/* Main navbar container */
+.main-section {
+  box-sizing: border-box;
+  background-color: #E5002B;
+  width: 91vw;
+  height: 70px;
+  border-radius: 20px;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+  display: flex;
+  color: white;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 10px;
+}
+
+/* Regular nav items */
+.navbar-part {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  min-width: 0; /* Allows items to shrink properly */
+}
+
+/* Center logo item */
+.navbar-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 auto; /* Don't grow or shrink */
+  transform: translateY(-30%);
+}
+
+/* Image styles */
+.navbar-icon {
+  height: 20px;
+  width: 20px;
+  object-fit: contain;
+}
+
+.navbar-logo img {
+  height: 70px;
+  width: 70px;
+}
+
+/* Text styles */
+.icon-name {
+  font-size: 12px;
+  margin-top: 4px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+span {
+  position: absolute;
+  top: -8px;
+  right: 12px;
+  background-color: white;
+  color: #e5002b;
+  border-radius: 30%;
+  padding: 1px 5px;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 1;
+  min-width: 10px;
+  text-align: center;
+  border: 1px solid #e5002b;
+}

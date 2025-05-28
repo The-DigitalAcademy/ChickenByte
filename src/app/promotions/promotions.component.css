@@ -1,0 +1,46 @@
+app-navbar {
+  position: fixed;
+  bottom: 40;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  margin-bottom: 50px;
+}
+
+.addtocartButton{
+    width: 90%; height: 40px; 
+    background-color: #E5002B; 
+    outline: none; border: none; 
+    border-radius: 5px;
+    font-weight: bold; 
+    color: white;
+     font-family: "Poppins", sans-serif;
+}
+
+
+.main-scroll::-webkit-scrollbar {
+  display: none;             
+}
+
+.food-title{
+    font-family: "Poppins", sans-serif;
+    font-weight: bolder; 
+    font-size: 10px;
+}
+
+.heading{
+    font-family: "Poppins", sans-serif;
+    color: black; 
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.food-price{
+     font-family: "Poppins", sans-serif;
+     font-size: 12px;
+     color: #E5002B;
+     font-weight: bold;
+}
+
+
+

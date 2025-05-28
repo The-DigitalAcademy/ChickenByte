@@ -1,0 +1,97 @@
+app-navbar {
+    position: fixed;
+    bottom: 40;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    margin-bottom: 50px;
+}
+
+.addtocartButton {
+    width: 90%;
+    height: 40px;
+    background-color: red;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Category section container */
+.category-section {
+    display: flex;
+    gap: 12px;
+    padding: 10px 16px;
+    overflow-x: auto;
+    height: 60px;
+    align-items: center;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.category-section::-webkit-scrollbar {
+    display: none;
+}
+
+
+.a-category {
+    border-radius: 20px;
+    padding: 8px 16px;
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    white-space: nowrap;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.a-category p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    font-family: "Poppins", sans-serif;
+}
+
+
+.a-category.active {
+    background-color: #E5002B;
+    border-color: #E5002B;
+    color: white;
+}
+
+.a-category.active p {
+    color: white;
+}
+
+
+.a-category:active {
+    transform: scale(0.98);
+}
+
+.a-category:hover {
+    background-color: #eee;
+}
+
+.a-category.active:hover {
+    background-color: #C40023;
+}
+
+.main-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.food-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: bolder;
+    font-size: 10px;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-weight: bold;
+}
