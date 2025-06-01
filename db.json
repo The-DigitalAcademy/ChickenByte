@@ -733,6 +733,12 @@
       "password": "12345678",
       "email": "paballo@gmail.com",
       "role": "admin"
+    },
+    {
+      "id": "37f6",
+      "name": "Mamello",
+      "email": "mamello123@gmail.com",
+      "password": "12345678q"
     }
   ]
 }
