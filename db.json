@@ -691,7 +691,16 @@
       ]
     }
   ],
-  "cartItems": [],
+  "cartItems": [
+    {
+      "id": "oymwwxean",
+      "productId": "1",
+      "title": "Classic Chicken Burger",
+      "price": 75.99,
+      "quantity": 1,
+      "imageUrl": "https://images.ctfassets.net/0p42pznmbeec/3BzuZ5x6SVHazSntPA4JyS/b4869ac2dc7b4c48fc3dcb33ab53de61/Colonel_Burger_1200x900.jpg?h=900&w=1200&fm=webp&fit=fill"
+    }
+  ],
   "users": [
     {
       "id": "1",
@@ -700,16 +709,30 @@
       "password": "123qwe"
     },
     {
-      "id": "2",
-      "name": "Mpho",
-      "email": "mpho@gmail.com",
-      "password": "123Mpho"
+      "id": "9d19",
+      "name": "",
+      "email": "mellow@gmail.com",
+      "password": "12345qwert"
     },
     {
-      "id": "f39e",
-      "name": "",
-      "email": "titen@gmail.com",
-      "password": "12345qwert"
+      "id": "3c8c",
+      "name": "mellow",
+      "email": "mellow1@gmail.com",
+      "password": "a123456789"
+    },
+    {
+      "id": "287d",
+      "userName": "MellowMokoena",
+      "password": "tinte@123",
+      "email": "mellowT@gmail.com",
+      "role": "respondent"
+    },
+    {
+      "id": "669f",
+      "userName": "paballo",
+      "password": "12345678",
+      "email": "paballo@gmail.com",
+      "role": "admin"
     }
   ]
 }
