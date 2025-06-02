@@ -51,7 +51,8 @@ export class RegisterComponent {
     this.auth.getUserByEmail(this.user.email).subscribe({
       next: (users) => {
         if (users && users.length > 0) {
-          alert('Email already registered!');
+          alert('Email already registered!, please try again');
+          this.resetForm();
         } else {
  
           this.auth.registerUser(this.user).subscribe({
@@ -59,7 +60,7 @@ export class RegisterComponent {
 
               this.localStorage .saveUser(registeredUser);
               
-              alert('Registration successful!');
+              alert('Registration successful! ' + this.user.name);
               this.router.navigate(['/']); 
               
               this.resetForm();
