@@ -20,6 +20,10 @@ interface CartItem {
   styleUrl: './product-details.component.css'
 })
 export class ProductDetailsComponent implements OnInit {
+
+  showPopup = false;
+
+
   menuService = inject(MenuService);
   cartService = inject(CartService);
   route = inject(ActivatedRoute);
@@ -57,6 +61,15 @@ export class ProductDetailsComponent implements OnInit {
     return;
   }
 
+  this.showPopup = true;
+
+      const audio = new Audio('../../assets/audio/bell1.wav');
+      audio.play();
+
+      setTimeout(() => {
+        this.showPopup = false;
+      }, 2000);
+
   // Create a new object with all product properties plus cart-specific fields
   const cartItem = {
     ...this.product,          // Spread all product properties
@@ -68,6 +81,7 @@ export class ProductDetailsComponent implements OnInit {
   this.cartService.addItem(cartItem).subscribe({
     next: (addedItem) => {
       console.log('Item added to cart:', addedItem);
+      
     },
     error: (err) => {
       console.error('Failed to add item to cart:', err);

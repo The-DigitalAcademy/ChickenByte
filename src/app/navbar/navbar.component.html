@@ -2,33 +2,29 @@
 
   <!-- Home -->
   <div (click)="onHome()" class="navbar-part">
-    <img class="navbar-icon" src="assets/images/home.png">
+     <div class="navbar-icon"><i class="bi bi-house"></i></div>
     <p class="icon-name">Home</p>
   </div>
 
   <!-- Cart -->
   <div (click)="onShowCart()" class="navbar-part" style="position: relative;">
-    <img class="navbar-icon" src="assets/images/cart22.png">
+    <div class="navbar-icon"><i class="bi bi-bag-plus"></i></div>
     <p class="icon-name">Cart</p>
     <span *ngIf="cartItemCount > 0">
       {{ cartItemCount }}
     </span>
   </div>
 
-  <!-- Logo (centered) -->
-  <div (click)="onHome()" class="navbar-logo">
-    <img src="assets/images/logo.png">
-  </div>
 
   <!-- Promotion -->
   <div (click)="navigateTo('/promotions')" class="navbar-part">
-    <img class="navbar-icon" src="assets/images/bk.png">
+     <div class="navbar-icon"><i class="bi bi-heart"></i></div>
     <p class="icon-name">Promotion</p>
   </div>
 
   <!-- Profile -->
   <div (click)="onShowRegister()" class="navbar-part">
-    <img class="navbar-icon" src="assets/images/profile2.png">
+     <div class="navbar-icon"><i class="bi bi-person"></i></div>
     <p class="icon-name">Profile</p>
   </div>
 
