@@ -52,11 +52,22 @@
                 Add to Cart - R{{(product.price * quantity) | number:'1.2-2'}}
             </button>
         </div>
+        
+        
     </div>
 </div>
+
 
 <div *ngIf="errorMessage" class="error-message">
     {{errorMessage}}
 </div>
+
+<!-- Top Popup -->
+<div *ngIf="showPopup" class="popup-overlay">
+    <div class="popup-content">
+      ✅ Food added to cart 🍔
+    </div>
+  </div>
 </body>
 </html>
+

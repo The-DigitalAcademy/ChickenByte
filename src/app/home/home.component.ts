@@ -15,6 +15,8 @@ import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
+  showPopup = false;
+
   router = inject(Router);
   menuService = inject(MenuService);
   cartService = inject(CartService);
@@ -53,6 +55,15 @@ export class HomeComponent implements OnInit {
         // Optionally, show an error message to the user
       }
     });
+
+    this.showPopup = true;
+
+      const audio = new Audio('../../assets/audio/bell1.wav');
+      audio.play();
+
+      setTimeout(() => {
+        this.showPopup = false;
+      }, 2000);
   }
 
   filterByCategory(category: string): void {

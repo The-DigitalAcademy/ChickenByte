@@ -13,6 +13,8 @@ import { RouterModule } from '@angular/router';
   styleUrl: './promotions.component.css'
 })
 export class PromotionsComponent implements OnInit {
+  showPopup = false;
+
     menuService = inject(MenuService);
      cartService = inject(CartService);
     menuItems: any[] = [];
@@ -37,6 +39,14 @@ export class PromotionsComponent implements OnInit {
     this.cartService.addItem(menuItem).subscribe({
       next: (cartItem) => {
         console.log('Item added to cart:', cartItem);
+        this.showPopup = true;
+
+        const audio = new Audio('../../assets/audio/bell1.wav');
+        audio.play();
+
+        setTimeout(() => {
+          this.showPopup = false;
+        }, 2000);
       
       },
       error: (err) => {
