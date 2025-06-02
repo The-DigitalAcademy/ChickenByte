@@ -14,9 +14,9 @@ export class UsersService {
 
   http = inject(HttpClient);
 
- registerUser(user: User) {
-  return this.http.post<User>(this.API, user); 
-}
+  registerUser(user: User) {
+    return this.http.post<User>(this.API, user);
+  }
 
   getAllUsers(): Observable<User[]> {
     return this.http.get<User[]>(this.API);
