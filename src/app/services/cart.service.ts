@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject, Observable, throwError } from 'rxjs';
-import { catchError, map, tap } from 'rxjs/operators';
+import { BehaviorSubject, Observable, throwError, forkJoin } from 'rxjs';
+import { catchError, tap } from 'rxjs/operators';
 import { CartItem } from '../models/cart-item.model';
 
 @Injectable({
@@ -43,7 +43,7 @@ export class CartService {
       return this.updateItem(updatedItem);
     } else {
       const newItem: CartItem = {
-        id: this.generateUniqueId(), // Or use menuItem.id if it's guaranteed unique and string
+        id: this.generateUniqueId(),
         productId: menuItem.id,
         title: menuItem.title,
         price: menuItem.price,
@@ -85,15 +85,24 @@ export class CartService {
     );
   }
 
+  /** ✅ Fixed clearCart: Deletes items from json-server and updates the observable */
   clearCart(): Observable<any> {
-   
     const currentCartItems = this.cartItemsSource.getValue();
-    const deleteObservables = currentCartItems.map(item => this.removeItem(item.id));
-    
-    this.cartItemsSource.next([]);
-    this._calculateTotalItems([]);
-    console.warn('Clear cart called. For json-server, individual item deletions might be needed or a custom script.');
-    return new BehaviorSubject(null).asObservable(); 
+    if (currentCartItems.length === 0) {
+      return new BehaviorSubject(null).asObservable(); // Nothing to delete
+    }
+
+    const deleteRequests = currentCartItems.map(item =>
+      this.http.delete(`${this.apiUrl}/${item.id}`)
+    );
+
+    return forkJoin(deleteRequests).pipe(
+      tap(() => {
+        this.cartItemsSource.next([]);
+        this._calculateTotalItems([]);
+      }),
+      catchError(this.handleError)
+    );
   }
 
   private generateUniqueId(): string {
