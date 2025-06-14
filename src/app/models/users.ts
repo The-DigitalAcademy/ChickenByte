@@ -4,3 +4,12 @@ export interface User {
     password: string;
 }
 
+export interface UserAddress extends User{
+    streetNumer: string;
+    surburb: string;
+    city: string;
+}
+
+export interface UserNumber extends UserAddress{
+    phoneNumber: number;
+}

@@ -25,14 +25,13 @@ export class NavbarComponent implements OnInit, OnDestroy {
     });
   }
 
-  onShowRegister() {
-    this.router.navigate(['/register'])
-  };
-
   onShowCart() {
     this.router.navigate(['/cart'])
   };
 
+  onShowProfile(){
+    this.router.navigate(['profile'])
+  }
   navigateTo(path: string) {
   this.router.navigate([path]);
 }

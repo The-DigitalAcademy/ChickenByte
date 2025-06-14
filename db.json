@@ -697,7 +697,14 @@
       "id": "1",
       "name": "Memello",
       "email": "tinte@gmail.com",
-      "password": "123qwe"
+      "password": "123qwe",
+      "address":{
+        "streetNumber":"9",
+        "StreetName":"Mandem",
+        "surburb":"Windor West",
+        "city":"Randburg"
+      },
+      "phoneNumber":"0123456789"
     },
     {
       "id": "9d19",
@@ -747,6 +754,18 @@
       "id": "4766",
       "name": "Teboho",
       "email": "otshepahetse@gmail.com",
+      "password": "1234qwer"
+    },
+    {
+      "id": "51e1",
+      "name": "Otshepahetse",
+      "email": "tintelehlohonolo359@gmail.com",
+      "password": "1234qwer"
+    },
+    {
+      "id": "31cc",
+      "name": "tinte",
+      "email": "Onthatile0584@icloud.com",
       "password": "1234qwer"
     }
   ]

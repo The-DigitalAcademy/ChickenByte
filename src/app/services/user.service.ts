@@ -4,13 +4,14 @@ import { inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { User } from '../models/users';
+import { environment } from '../../environments';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsersService {
 
-  private API = 'http://localhost:3000/users'
+API: string = `${environment.apiUrl}/users`;
 
   http = inject(HttpClient);
 

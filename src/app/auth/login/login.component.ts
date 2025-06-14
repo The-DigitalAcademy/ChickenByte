@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { UsersService } from '../../services/user.service';
@@ -8,7 +8,7 @@ import { LocalStorageService } from '../../services/local-storage.service';
 
 @Component({
   selector: 'app-login',
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, RouterLink],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
 })
@@ -44,15 +44,14 @@ export class LoginComponent {
   }
 
   login() {
-    if (
-      !this.credentials.email.includes('@') ||
-      !this.credentials.email.includes('.')
-    ) {
-      alert('Invalid Email!');
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailRegex.test(this.credentials.email)) {
+      alert('Please enter a valid email!');
       return;
     }
-    if (this.credentials.password.length < 8) {
-      alert('Password must be at least 8 characters long!');
+      const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+    if (!passwordRegex.test(this.credentials.password)) {
+      alert('Password must be at least 8 characters with at least 1 letter and 1 number!');
       return;
     }
 
