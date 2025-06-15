@@ -24,9 +24,18 @@ export class CheckoutComponent implements OnInit {
     private router: Router 
   ) {
     this.checkoutForm = this.fb.group({
+      // Personal Information
       name: ['', Validators.required],
-      address: ['', Validators.required],
-      paymentMethod: ['cash_on_delivery', Validators.required] 
+      email: ['', [Validators.required, Validators.email]],
+      phone: ['', [Validators.required, Validators.pattern(/^[0-9]{10,15}$/)]],
+      
+      // Shipping Address
+      street_name: ['', Validators.required],
+      city: ['', Validators.required],
+      postalCode: ['', Validators.required],
+      
+      // Payment
+      paymentMethod: ['cash_on_delivery', Validators.required]
     });
   }
 
