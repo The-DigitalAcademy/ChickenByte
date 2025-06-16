@@ -4,19 +4,21 @@ import { Router, RouterLink } from '@angular/router';
 import { CartService } from '../services/cart.service'; 
 import { CartItem } from '../models/cart-item.model'; 
 import { Observable } from 'rxjs';
-import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms'; 
+import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ReceiptComponent } from "../receipt/receipt.component"; 
 
 @Component({
   selector: 'app-checkout',
   templateUrl: './checkout.component.html',
   styleUrls: ['./checkout.component.css'],
   standalone: true,
-  imports: [CommonModule, RouterLink, ReactiveFormsModule] 
+  imports: [CommonModule, RouterLink, ReactiveFormsModule, ReceiptComponent] 
 })
 export class CheckoutComponent implements OnInit {
   cartItems$: Observable<CartItem[]> | undefined;
   totalPrice: number = 0;
   checkoutForm: FormGroup;
+  submitted = false;
 
   constructor(
     private cartService: CartService,

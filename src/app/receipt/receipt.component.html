@@ -1,0 +1,21 @@
+<div class="receipt-container">
+  <h2>Order Receipt</h2>
+
+  <div class="section">
+    <p><strong>Name:</strong> {{ name }}</p>
+    <p><strong>Address:</strong> {{ address }}</p>
+    <p><strong>Payment Method:</strong> {{ paymentMethod }}</p>
+    <p><strong>Estimated Delivery:</strong> {{ deliveryTime }}</p>
+  </div>
+
+  <div class="section">
+    <h3>Items:</h3>
+    <ul>
+      <li *ngFor="let item of cartItems">
+        {{ item.name }} x{{ item.quantity }} - R{{ item.price * item.quantity  }}
+      </li>
+    </ul>
+    <p class="total"><strong>Total:</strong> R{{ getTotal() }}</p>
+  </div>
+</div>
+

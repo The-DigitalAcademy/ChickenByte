@@ -1,0 +1,18 @@
+
+.receipt-container {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 400px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.section {
+  margin-bottom: 1rem;
+}
+
+.total {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}

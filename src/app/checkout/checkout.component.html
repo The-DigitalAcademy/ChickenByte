@@ -109,3 +109,12 @@
     </div>
   </div>
 </div>
+
+<app-receipt
+  *ngIf="submitted"
+  [name]="checkoutForm.value.name"
+  [address]="checkoutForm.value.address"
+  [paymentMethod]="checkoutForm.value.paymentMethod"
+  [deliveryTime]="'30–45 minutes'"
+  [cartItems]="cartItems$ | async"
+></app-receipt>

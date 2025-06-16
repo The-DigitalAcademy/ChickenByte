@@ -748,6 +748,12 @@
       "name": "Teboho",
       "email": "otshepahetse@gmail.com",
       "password": "1234qwer"
+    },
+    {
+      "id": "2ec0",
+      "name": "Asive",
+      "email": "skit1ne@gmail.com",
+      "password": "1234qwer"
     }
   ]
 }
