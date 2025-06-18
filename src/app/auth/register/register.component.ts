@@ -25,10 +25,9 @@ export class RegisterComponent {
   };
   confirmPassword = '';
 
-   register() {
-
+  register() {
     if (!this.user.name) {
-      alert('Please enter a name')
+      alert('Please enter a name');
     }
 
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -37,9 +36,11 @@ export class RegisterComponent {
       return;
     }
 
-      const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
     if (!passwordRegex.test(this.user.password)) {
-      alert('Password must be at least 8 characters with at least 1 letter and 1 number!');
+      alert(
+        'Password must be at least 8 characters with at least 1 letter and 1 number!'
+      );
       return;
     }
 
@@ -54,24 +55,20 @@ export class RegisterComponent {
           alert('Email already registered!, please try again');
           this.resetForm();
         } else {
- 
           this.auth.registerUser(this.user).subscribe({
             next: (registeredUser) => {
+              this.localStorage.saveUser(registeredUser);
 
-              this.localStorage .saveUser(registeredUser);
-              
-              alert('Registration successful! ' + this.user.name);
-              this.router.navigate(['/']); 
-              
+              alert('Registration successful! Welcome ' + this.user.name);
+              this.router.navigate(['/']);
+
               this.resetForm();
-            }
+            },
           });
         }
       },
-
     });
   }
-
 
   private resetForm(): void {
     this.user = { name: '', email: '', password: '' };

@@ -25,8 +25,8 @@ export class NavbarComponent implements OnInit, OnDestroy {
     });
   }
 
-  onShowRegister() {
-    this.router.navigate(['/register'])
+  onShowProfile() {
+    this.router.navigate(['/profile'])
   };
 
   onShowCart() {

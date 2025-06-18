@@ -22,37 +22,20 @@ export class LoginComponent {
     private usersService: UsersService,
     private router: Router,
     private localStorageService: LocalStorageService
-  ) {
-    this.checkExistingUser();
-  }
-
-  private checkExistingUser(): void {
-    const existingUser = this.localStorageService.getUser();
-    if (existingUser) {
-      if (
-        confirm(
-          'You are already logged in. Would you like to continue as ' +
-            existingUser.email +
-            '?'
-        )
-      ) {
-        this.router.navigate(['/']);
-      } else {
-        this.localStorageService.removeUser();
-      }
-    }
-  }
+  ) {}
 
   login() {
-    if (
-      !this.credentials.email.includes('@') ||
-      !this.credentials.email.includes('.')
-    ) {
-      alert('Invalid Email!');
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailRegex.test(this.credentials.email)) {
+      alert('Please enter a valid email!');
       return;
     }
-    if (this.credentials.password.length < 8) {
-      alert('Password must be at least 8 characters long!');
+
+    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+    if (!passwordRegex.test(this.credentials.password)) {
+      alert(
+        'Password must be at least 8 characters with at least 1 letter and 1 number!'
+      );
       return;
     }
 
@@ -64,7 +47,7 @@ export class LoginComponent {
           if (user) {
             if (user.password === this.credentials.password) {
               this.localStorageService.saveUser(user);
-              alert('Welcome Back!' + user.name);
+              alert('Welcome Back! ' + user.name);
               this.router.navigate(['/']);
             } else {
               alert('Incorrect password');

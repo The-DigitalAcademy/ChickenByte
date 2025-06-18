@@ -691,7 +691,24 @@
       ]
     }
   ],
-  "cartItems": [],
+  "cartItems": [
+    {
+      "id": "1xs4nhe92",
+      "productId": "25",
+      "title": "Double Patty Chicken Burger",
+      "price": 89.99,
+      "quantity": 1,
+      "imageUrl": "https://images.ctfassets.net/0p42pznmbeec/5Ooc6ykHqWc94fhQwOAVng/8e02a4953ff8593127833b24d4ef7e52/Double_Crunch_1200x900.jpg?h=900&w=1200&fm=webp&fit=fill"
+    },
+    {
+      "id": "wdisq7nou",
+      "productId": "26",
+      "title": "Crunchy Chicken Burger",
+      "price": 75.5,
+      "quantity": 1,
+      "imageUrl": "https://images.ctfassets.net/0p42pznmbeec/6e1iihtoFQrqlRzl3YQZWx/013ad0b17fae46dce147a86034376b2d/Crunch_Burger_1200x900.jpg?h=900&w=1200&fm=webp&fit=fill"
+    }
+  ],
   "users": [
     {
       "id": "1",
@@ -748,6 +765,18 @@
       "name": "Teboho",
       "email": "otshepahetse@gmail.com",
       "password": "1234qwer"
+    },
+    {
+      "id": "1d4b",
+      "name": "chiboy",
+      "email": "chiboy@gmail.com",
+      "password": "12345qwert"
+    },
+    {
+      "id": "bbe6",
+      "name": "Otshepahetse",
+      "email": "Onthatile0584@icloud.com",
+      "password": "123456qwe"
     }
   ]
 }

@@ -3,12 +3,13 @@ import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable, throwError, forkJoin } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
 import { CartItem } from '../models/cart-item.model';
+import { environment } from '../../environments';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CartService {
-  private apiUrl = 'http://localhost:3000/cartItems'; 
+  private apiUrl = `${environment.apiUrl}/cartItems`;
   private cartItemsSource = new BehaviorSubject<CartItem[]>([]);
   cartItems$ = this.cartItemsSource.asObservable();
 
@@ -26,7 +27,7 @@ export class CartService {
 
   fetchCartItems(): Observable<CartItem[]> {
     return this.http.get<CartItem[]>(this.apiUrl).pipe(
-      tap(items => {
+      tap((items) => {
         this.cartItemsSource.next(items);
         this._calculateTotalItems(items);
       }),
@@ -36,10 +37,15 @@ export class CartService {
 
   addItem(menuItem: any): Observable<CartItem> {
     const currentCartItems = this.cartItemsSource.getValue();
-    const existingItem = currentCartItems.find(item => item.productId === menuItem.id);
+    const existingItem = currentCartItems.find(
+      (item) => item.productId === menuItem.id
+    );
 
     if (existingItem) {
-      const updatedItem = { ...existingItem, quantity: existingItem.quantity + 1 };
+      const updatedItem = {
+        ...existingItem,
+        quantity: existingItem.quantity + 1,
+      };
       return this.updateItem(updatedItem);
     } else {
       const newItem: CartItem = {
@@ -48,10 +54,10 @@ export class CartService {
         title: menuItem.title,
         price: menuItem.price,
         quantity: 1,
-        imageUrl: menuItem.imageUrl
+        imageUrl: menuItem.imageUrl,
       };
       return this.http.post<CartItem>(this.apiUrl, newItem).pipe(
-        tap(addedItem => {
+        tap((addedItem) => {
           const updatedItems = [...currentCartItems, addedItem];
           this.cartItemsSource.next(updatedItems);
           this._calculateTotalItems(updatedItems);
@@ -62,22 +68,26 @@ export class CartService {
   }
 
   updateItem(itemToUpdate: CartItem): Observable<CartItem> {
-    return this.http.put<CartItem>(`${this.apiUrl}/${itemToUpdate.id}`, itemToUpdate).pipe(
-      tap(updatedItem => {
-        const items = this.cartItemsSource.getValue().map(item => 
-          item.id === updatedItem.id ? updatedItem : item
-        );
-        this.cartItemsSource.next(items);
-        this._calculateTotalItems(items);
-      }),
-      catchError(this.handleError)
-    );
+    return this.http
+      .put<CartItem>(`${this.apiUrl}/${itemToUpdate.id}`, itemToUpdate)
+      .pipe(
+        tap((updatedItem) => {
+          const items = this.cartItemsSource
+            .getValue()
+            .map((item) => (item.id === updatedItem.id ? updatedItem : item));
+          this.cartItemsSource.next(items);
+          this._calculateTotalItems(items);
+        }),
+        catchError(this.handleError)
+      );
   }
 
   removeItem(itemId: string): Observable<any> {
     return this.http.delete(`${this.apiUrl}/${itemId}`).pipe(
       tap(() => {
-        const items = this.cartItemsSource.getValue().filter(item => item.id !== itemId);
+        const items = this.cartItemsSource
+          .getValue()
+          .filter((item) => item.id !== itemId);
         this.cartItemsSource.next(items);
         this._calculateTotalItems(items);
       }),
@@ -92,7 +102,7 @@ export class CartService {
       return new BehaviorSubject(null).asObservable(); // Nothing to delete
     }
 
-    const deleteRequests = currentCartItems.map(item =>
+    const deleteRequests = currentCartItems.map((item) =>
       this.http.delete(`${this.apiUrl}/${item.id}`)
     );
 
@@ -111,6 +121,11 @@ export class CartService {
 
   private handleError(error: any) {
     console.error('An error occurred in CartService:', error);
-    return throwError(() => new Error('Something went wrong with the cart operation. Please try again.'));
+    return throwError(
+      () =>
+        new Error(
+          'Something went wrong with the cart operation. Please try again.'
+        )
+    );
   }
 }

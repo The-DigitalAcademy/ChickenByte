@@ -4,13 +4,14 @@ import { inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { User } from '../models/users';
+import { environment } from '../../environments';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsersService {
 
-  private API = 'http://localhost:3000/users'
+  private API =`${environment.apiUrl}/users`;
 
   http = inject(HttpClient);
 
@@ -25,4 +26,8 @@ export class UsersService {
   getUserByEmail(email: string): Observable<User[]> {
     return this.http.get<User[]>(`${this.API}?email=${email}`);
   };
+
+  getUserById(id?: number): Observable<User[]>{
+    return this.http.get<User[]>(`${this.API}?id=${id}`);
+  }
 }

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { environment } from '../../environments';// Fixed import path
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs'; // Added for type safety
-import { FoodItem } from '../food-item';
+import { FoodItem } from '../models/food-item';
 
 @Injectable({
   providedIn: 'root'
